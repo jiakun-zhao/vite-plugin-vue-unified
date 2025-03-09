@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-vue-unified",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Transform markdown to vue with Unified.",
   "author": "Jiakun Zhao <hi@zhaojiakun.com>",
   "license": "MIT",

@@ -1,0 +1,65 @@
+{
+  "name": "vite-plugin-vue-unified",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Transform markdown to vue with Unified.",
+  "author": "Jiakun Zhao <hi@zhaojiakun.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/jiakun-zhao/vite-plugin-vue-unified#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiakun-zhao/vite-plugin-vue-unified.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jiakun-zhao/vite-plugin-vue-unified/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "tsx src/index.ts",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp && pnpm publish && npx cnpm sync vite-plugin-vue-unified",
+    "stub": "unbuild --stub",
+    "test": "vitest -u"
+  },
+  "peerDependencies": {
+    "vite": "^6.0.0"
+  },
+  "dependencies": {
+    "rehype-stringify": "^10.0.1",
+    "remark-mdc": "^3.5.3",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.1",
+    "unified": "^11.0.5",
+    "unist-util-filter": "^5.0.1",
+    "unist-util-map": "^4.0.0",
+    "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.8.1",
+    "@jiakun-zhao/utils": "^1.3.1",
+    "@types/hast": "^3.0.4",
+    "@types/mdast": "^4.0.4",
+    "@types/node": "^22.13.10",
+    "bumpp": "^10.0.3",
+    "eslint": "^9.22.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "unbuild": "^3.5.0",
+    "vfile": "^6.0.3",
+    "vite": "^6.2.1",
+    "vitest": "^3.0.8"
+  }
+}

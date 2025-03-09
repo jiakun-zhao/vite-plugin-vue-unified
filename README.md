@@ -25,7 +25,7 @@ export default defineConfig({
 })
 ```
 
-### How to transform markdown to vue
+### Transform
 
 See [tests](./src/transform.test.ts)
 

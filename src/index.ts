@@ -4,7 +4,7 @@ import { createFilter } from 'vite'
 import transformToVue from '~/transform'
 import { name } from '../package.json'
 
-export default function vitePluginMarkdown(options: PluginOptions = {}): Plugin {
+export default function (options: PluginOptions = {}): Plugin {
   const {
     components,
     remarkPlugins,

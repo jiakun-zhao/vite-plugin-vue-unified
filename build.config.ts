@@ -11,7 +11,6 @@ export default defineBuildConfig({
     '~': fileURLToPath(new URL('./src', import.meta.url)),
   },
   rollup: {
-    emitCJS: true,
     inlineDependencies: true,
   },
 })
